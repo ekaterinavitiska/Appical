@@ -14,7 +14,7 @@ public class BasePage {
     public By englishLanguage = new By.ByXPath("");
     public By englishText = new By.ByXPath("");
 
-    Condition clickable = and("can be clicked", visible, enabled);
+    //Condition clickable = and("can be clicked", visible, enabled);
 
     public void clickDropDownMenu(){
         $(cuctomerCasesMenu).waitUntil(Condition.visible, Configuration.timeout).click();

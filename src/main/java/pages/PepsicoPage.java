@@ -10,6 +10,8 @@ import static com.codeborne.selenide.Selenide.$;
 public class PepsicoPage extends BasePage{
 
     public By pepsicoHeader = new By.ByXPath("");
+    public By nextCaseLink = new By.ByXPath("");
+
 
     public  boolean isHeaderVisible() {
         return $(pepsicoHeader).isDisplayed();
@@ -18,4 +20,12 @@ public class PepsicoPage extends BasePage{
     public String getHeaderText() {
         return $(pepsicoHeader).getText();
     }
+    public BakerTillyPage pressNextCase(){
+
+        $(nextCaseLink).waitUntil(Condition.visible, Configuration.timeout).click();
+        return new BakerTillyPage();
+    }
+
+
+
 }
