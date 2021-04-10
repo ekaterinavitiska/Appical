@@ -9,19 +9,11 @@ import pages.NavigationPage;
 import pages.PepsicoPage;
 
 public class NavigationPageSteps {
-
-
+    NavigationPage navigationPage = new NavigationPage();
     PepsicoPage pepsicoPage;
-    NavigationPage navigationPage;
-
-
 
     @Given("User selects Pepsico menu")
     public void openPepsicoPage() {
-        pepsicoPage = navigationPage.selectElementFromDD();
+        pepsicoPage = navigationPage.selectElementFromDropDown();
     }
-
-
-
-
 }

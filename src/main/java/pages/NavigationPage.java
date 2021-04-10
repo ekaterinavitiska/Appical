@@ -9,8 +9,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class NavigationPage extends BasePage {
 
-    public PepsicoPage selectElementFromDD(){
-
+    public PepsicoPage selectElementFromDropDown(){
         $(pepsicoCaseMenu).waitUntil(Condition.visible, Configuration.timeout).click();
         return new PepsicoPage();
     }

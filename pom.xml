@@ -32,6 +32,12 @@
             <version>3.141.59</version>
         </dependency>
         <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
             <version>4.8.0</version>
@@ -43,31 +49,9 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>7.0.0</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.aventstack</groupId>
-            <artifactId>extentreports</artifactId>
-            <version>4.0.9</version>
-        </dependency>
-        <dependency>
-            <groupId>com.aventstack</groupId>
-            <artifactId>extentreports-cucumber4-adapter</artifactId>
-            <!--Do not change, the only working version for both running from feature file and runner -->
-            <version>1.0.8</version>
-        </dependency>
-        <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-picocontainer</artifactId>
             <version>4.8.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.codeborne</groupId>
-            <artifactId>selenide</artifactId>
-            <version>5.6.0</version>
         </dependency>
         <dependency>
             <groupId>net.masterthought</groupId>
@@ -75,10 +59,9 @@
             <version>4.11.0</version>
         </dependency>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>compile</scope>
+            <groupId>com.codeborne</groupId>
+            <artifactId>selenide</artifactId>
+            <version>5.20.0</version>
         </dependency>
     </dependencies>
 </project>

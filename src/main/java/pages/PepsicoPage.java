@@ -9,23 +9,14 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class PepsicoPage extends BasePage{
 
-    public By pepsicoHeader = new By.ByXPath("");
-    public By nextCaseLink = new By.ByXPath("");
-
-
-    public  boolean isHeaderVisible() {
-        return $(pepsicoHeader).isDisplayed();
-    }
+    public By nextCaseLink = new By.ByXPath("//*[@class = 'case-nav']//*[contains(@href,'case-study-baker-tilly-2/')]");
 
     public String getHeaderText() {
-        return $(pepsicoHeader).getText();
+        return $(pageHeader).getText();
     }
     public BakerTillyPage pressNextCase(){
-
-        $(nextCaseLink).waitUntil(Condition.visible, Configuration.timeout).click();
+        $(nextCaseLink).scrollTo();
+        $(nextCaseLink).click();
         return new BakerTillyPage();
     }
-
-
-
 }

@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import com.codeborne.selenide.Configuration;
 import io.cucumber.java.en.Given;
 import org.junit.Assert;
 import pages.BasePage;
@@ -12,8 +13,13 @@ public class BasicPageSteps {
 
     @Given("User opens basic page")
     public void openBasicPage() {
-        open("/https://appical.net/");
+        Configuration.startMaximized = true;
+        open("https://appical.net/en/");
+    }
 
+    @Given("User accept cookies")
+    public void acceptCookies() {
+        basePage.clickAcceptCookiesButton();
     }
 
     @Given("User selects English language from dropdown")
@@ -27,9 +33,9 @@ public class BasicPageSteps {
         Assert.assertEquals(basePage.getHeaderText(), basePageHeader);
     }
 
-    @Given("User presses Customer Cases menu")
+    @Given("User opens Customer Cases menu")
     public void openCustomerCasesMenu() {
-        basePage.clickDropDownMenu();
+        basePage.openCustomerCasesMenu();
     }
 
 

@@ -6,13 +6,13 @@ import pages.BakerTillyPage;
 import pages.PepsicoPage;
 
 public class PepsicoPageSteps {
-    public final String pepsicoHeader = "PepsiCo Case ";
-    PepsicoPage pepsicoPage;
+    public final String pepsicoHeader = "PepsiCo Case";
+    PepsicoPage pepsicoPage = new PepsicoPage();
     BakerTillyPage bakerTillyPage;
 
-    @Given("Pepsico Page header is correct")
+    @Given("Pepsico Page is displayed")
     public void assertPepsicoText() {
-        Assert.assertEquals(pepsicoPage.getHeaderText(), pepsicoHeader);
+        Assert.assertEquals(pepsicoHeader, pepsicoPage.getHeaderText());
     }
 
     @Given("User opens Next Case")

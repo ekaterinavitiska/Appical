@@ -8,16 +8,19 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
 
 public class BasePage {
-    public By languageDropdown = new  By.ByXPath("");
-    public By cuctomerCasesMenu = new By.ByXPath("");
-    public By pepsicoCaseMenu = new By.ByXPath("");
-    public By englishLanguage = new By.ByXPath("");
-    public By englishText = new By.ByXPath("");
+    public By languageDropdown = new  By.ByXPath("//*[@class ='wpml-ls-flag']");
+    // Also available from footer menu
+    public By customerCasesMenu = new By.ByXPath("//nav[@class = 'navigation main-menu']//*[@href = 'https://appical.net/en/cases/']");
+    // Also available from different places on the page
+    public By pepsicoCaseMenu = new By.ByXPath("//*[@class = 'navigation main-menu']//*[@href = 'https://appical.net/en/cases/pepsico/']");
+    public By englishLanguage = new By.ByXPath("//*[@alt = 'English']");
+    public By acceptCookiesButton = new By.ByXPath("//a[@id = 'CybotCookiebotDialogBodyLevelButtonAccept']");
 
-    //Condition clickable = and("can be clicked", visible, enabled);
+    public By pageHeader = new By.ByClassName("header__title");
 
-    public void clickDropDownMenu(){
-        $(cuctomerCasesMenu).waitUntil(Condition.visible, Configuration.timeout).click();
+
+    public void openCustomerCasesMenu(){
+        $(customerCasesMenu).waitUntil(Condition.visible, Configuration.timeout).hover();
     }
 
     public void openLanguageDropdown(){
@@ -28,8 +31,13 @@ public class BasePage {
         $(englishLanguage).waitUntil(Condition.visible, Configuration.timeout).click();
     }
 
-
     public String getHeaderText() {
-        return $(englishText).getText();
+        return $(pageHeader).getText();
+    }
+
+    public void clickAcceptCookiesButton(){
+        if ($(acceptCookiesButton).isDisplayed()) {
+            $(acceptCookiesButton).click();
+        }
     }
 }

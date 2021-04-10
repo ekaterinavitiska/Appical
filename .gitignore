@@ -1,2 +1,5 @@
 /Appical.iml
 /.idea/
+/target/
+/test.iml
+/build/
