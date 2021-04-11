@@ -23,9 +23,9 @@ Test-Case
 
 -  B: Change the language to English
 
--  C. In the the ‘Customer Cases’ menu choose the ‘Pepsico’ menu item
+-  C: In the the ‘Customer Cases’ menu choose the ‘Pepsico’ menu item
 
--  D:Choose ‘Next case’ by scrolling down
+-  D: Choose ‘Next case’ by scrolling down
 
 Automation Conditions
 
