@@ -5,11 +5,11 @@ import org.junit.Assert;
 import pages.BakerTillyPage;
 
 public class BakerTillySteps {
-    public final String bakerTillyHeader = "Baker Tilly’s new onboarding experience!";
+    public final String bakerTillyHeader = "Baker Tilly";
     BakerTillyPage bakerTillyPage = new BakerTillyPage();
 
     @Given("BakerTilly page is displayed")
     public void assertBakerTillyText() {
-        Assert.assertEquals(bakerTillyPage.getHeaderText(), bakerTillyHeader);
+        Assert.assertTrue(bakerTillyPage.getHeaderText().contains(bakerTillyHeader));
     }
 }
